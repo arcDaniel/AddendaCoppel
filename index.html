@@ -1,0 +1,228 @@
+<html>
+<head><title>ADDENDA :: COPPEL</title></head>
+<style>
+	body{padding:20px;font-family:Arial, Helvetica, sans-serif;font-size:0.7em; background-color:#CCC;}
+	td{font-family:Arial, Helvetica, sans-serif;font-size:0.7em;}
+	textarea{width:90%;height:500px;}
+	b{color:#666;}
+	td b{color:#333;}
+</style>
+<body>
+<h2>ADDENDA COPPEL</h2>
+Fecha Documento:<br />
+<input type="text" name="fecha" id="fecha" /> <b>Formato: yyyymmdd</b><br /> 
+Fecha de Pedido:<br />
+<input type="text" name="fecha_pedido" id="fecha_pedido" /><b>Formato: yyyy-mm-dd</b><br />
+Fecha de Entrega:<br />
+<input type="text" name="fecha_entrega" id="fecha_entrega" /><b>Formato: yyyy-mm-dd</b><br />
+Fecha XML:<br />
+<input type="text" name="fecha_xml" id="fecha_xml" /><b>Formato: yyyy-mm-ddThh:mm:ss (Como en el XML)</b><br />
+<hr />
+<table>
+    <tr>
+        <td>
+            No. de Factura:<br />
+            <input type="text" name="no_factura" id="no_factura" />
+        </td>
+        <td>
+            No. de Pedido:<br />
+            <input type="text" name="no_pedido" id="no_pedido" />
+        </td>
+        <td>
+            No. de Proveedor:<br />
+            <input type="text" name="no_proveedor" id="no_proveedor"/>
+        </td>
+    </tr>
+</table>
+<hr />
+<table>
+    <tr>
+        <td>
+            Ciudad:<br />
+            <input type="text" name="ciudad" id="ciudad" style="width:308px;" />
+         </td>
+         <td>
+            Bodega de Destino:<br />
+            <select id="bodega_destino" name="bodega_destino">
+                <option value=""></option>
+                <option value="30001">30001 CULIACAN</option>
+                <option value="30002">30002 LEON</option>
+                <option value="30003">30003 HERMOSILLO</option>
+                <option value="30004">30004 LAGUNA</option>
+                <option value="30006">30006 MONTERREY</option>
+                <option value="30007">30007 GUADALAJARA</option>
+                <option value="30020">30020 GUADALAJARA II</option>
+                <option value="30025">30025 SAN PEDRO TLAQUEPAQUE</option>
+                <option value="30008">30008 AZCAPOTZALCO</option>
+                <option value="30009">30009 PUEBLA</option>
+                <option value="30010">30010 VILLA HERMOSA</option>
+                <option value="30011">30011 IZTAPALAPA</option>
+                <option value="30012">30012 IMP_MXL2</option>
+                <option value="30013">30013 MEXICALI</option>
+                <option value="30014">30014 IZCALLI</option>
+                <option value="30015">30015 IXTAPALUCA</option>
+                <option value="30016">30016 TECAMAC</option>
+                <option value="30030">30030 TECAMAC II</option>
+                <option value="30017">30017 MERIDAC</option>
+                <option value="30018">30018 LOS MOCHIS</option>
+                <option value="30019">30019 VERACRUZ</option>
+            </select>
+         </td>
+         <td>
+            Bodega Receptora:<br />
+            <select id="bodega_receptora" name="bodega_receptora">
+                <option value=""></option>
+                <option value="30001">30001 CULIACAN</option>
+                <option value="30002">30002 LEON</option>
+                <option value="30003">30003 HERMOSILLO</option>
+                <option value="30004">30004 LAGUNA</option>
+                <option value="30006">30006 MONTERREY</option>
+                <option value="30007">30007 GUADALAJARA</option>
+                <option value="30020">30020 GUADALAJARA II</option>
+                <option value="30025">30025 SAN PEDRO TLAQUEPAQUE</option>
+                <option value="30008">30008 AZCAPOTZALCO</option>
+                <option value="30009">30009 PUEBLA</option>
+                <option value="30010">30010 VILLA HERMOSA</option>
+                <option value="30011">30011 IZTAPALAPA</option>
+                <option value="30012">30012 IMP_MXL2</option>
+                <option value="30013">30013 MEXICALI</option>
+                <option value="30014">30014 IZCALLI</option>
+                <option value="30015">30015 IXTAPALUCA</option>
+                <option value="30016">30016 TECAMAC</option>
+                <option value="30030">30030 TECAMAC II</option>
+                <option value="30017">30017 MERIDAC</option>
+                <option value="30018">30018 LOS MOCHIS</option>
+                <option value="30019">30019 VERACRUZ</option>
+            </select>
+         </td>
+    </tr> 
+    <tr>
+    	<td> 
+            Regi&oacute;n:<br />
+            <select id="region" name="region">
+                <option value=""></option>
+                <option value="1">1 LaPaz,Tijuana,Mexicali</option>
+                <option value="2">2 Culiac&aacute;n, Hermosillo, Los Mochis.</option>
+                <option value="3">3 Laguna.</option>
+                <option value="4">4 Monterrey.</option>
+                <option value="5">5 Guadalajara.</option>
+                <option value="6">6 Le&oacute;n, Izcalli.</option>
+                <option value="7">7 Puebla.</option>
+                <option value="8">8 Villahermosa, Merida.</option>
+                <option value="9">9 M&eacute;xico,Iztapalapa,Izcalli,Ixtapaluca,Tecamac.</option>
+            </select>
+         </td>
+         <td>
+         	Fletera:<br />
+			<input type="text" name="fletera" id="fletera" style="width:250px;" />
+         </td>
+     </tr>
+</table>
+<hr />
+<a href="#" id="agregar">[+] Agregar</a><br  /><br  />
+<div id="articulos_table">
+	<div id="art1">
+    	<table>
+        	<tr>
+            	<td>
+                	<b>Art[1]</b>
+                </td>
+            	<td>
+                	Codigo:<br />
+                	<input type="text" id="codigo1" />
+                </td>
+                <td>
+                	Cantidad:<br />
+                	<input type="text" id="cantidad1" />
+                </td>
+                <td>
+                	Precio:<br />
+                	<input type="text" id="precio1" />
+                </td>
+                <td>
+                	Descripci&oacute;n:<br />
+                	<input type="text" id="descripcion1" />
+                </td>
+            </tr>
+         </table>
+    </div>
+</div>
+<hr />
+<input type="button" id="enviar" value="Generar" />
+<hr />
+<h2>Resultado de Addenda:</h2>
+<textarea id="generada"></textarea>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript">
+	
+	var ahora = new Date();
+ 	var fecha2 = String(ahora.getFullYear()) + String(ahora.getMonth() + 1) + String(ahora.getDate());
+	$('#fecha').val(fecha2);
+	
+	var contador = 1;
+	$('#agregar').click(function(e){
+		e.preventDefault();
+		contador++;
+		var actual_table = $('#articulos_table').html();
+		var nueva_fila = "<div id=\"art"+contador+"\"><table><tr><td><b>Art["+contador+"]</b></td><td>Codigo:<br /><input type=\"text\" id=\"codigo"+contador+"\" /></td><td>Cantidad:<br /><input type=\"text\" id=\"cantidad"+contador+"\" /></td><td>Precio:<br /><input type=\"text\" id=\"precio"+contador+"\" /></td><td>Descripci&oacute;n:<br /><input type=\"text\" id=\"descripcion"+contador+"\" /></td></tr></table></div>"
+		$('#articulos_table').html(actual_table+nueva_fila);
+	});
+	$('#enviar').click(function(e){
+		var loadUrl = 'coppel.php';
+		var fecha = $('#fecha').val(); //yyyymmdd
+		var fecha_pedido = $('#fecha_pedido').val(); //yyyy-mm-dd
+		var fecha_entrega = $('#fecha_entrega').val(); //yyyy-mm-dd
+		var fecha_xml = $('#fecha_xml').val(); //yyyy-mm-ddThh:mm:ss
+		
+		var no_factura = $('#no_factura').val();
+		var no_pedido = $('#no_pedido').val();
+		var no_proveedor = $('#no_proveedor').val();
+		
+		var ciudad = $('#ciudad').val();
+		var bodega_destino = $('#bodega_destino').val();
+		var bodega_receptora = $('#bodega_receptora').val();
+		var region = $('#region').val();
+		
+		var fletera = $('#fletera').val();
+		
+		if(fecha != "" && fecha_pedido != "" && fecha_entrega != "" && fecha_xml != "" && no_factura != "" && no_pedido != "" && no_proveedor != "" && ciudad != "" && bodega_destino != "" && bodega_receptora != "" && region != "" && fletera != ""){
+			
+			var articulos = "";
+			
+			for(var i=1;i<=contador;i++){
+				//COD-CANT$PRECIO[DESCRIPCION]
+				var cod = $('#codigo'+(i)).val();
+				var cant = $('#cantidad'+(i)).val();
+				var precio = $('#precio'+(i)).val();
+				var descripcion = $('#descripcion'+(i)).val();
+				if(i <= 1){
+			 		articulos += cod+"-"+cant+"$"+precio+"["+descripcion+"]";
+				}else{
+					articulos += ";"+cod+"-"+cant+"$"+precio+"["+descripcion+"]";
+				}
+			}
+			/*
+			$('#articulos_table').each(function(index) {
+				//COD-CANT$PRECIO[DESCRIPCION]
+				var cod = $('#codigo'+(index+1)).val();
+				var cant = $('#cantidad'+(index+1)).val();
+				var precio = $('#precio'+(index+1)).val();
+				var descripcion = $('#descripcion'+(index+1)).val();
+				console.log(cod);
+				if(index <= 0){
+			 		articulos += cod+"-"+cant+"$"+precio+"["+descripcion+"]";
+				}else{
+					articulos += ";"+cod+"-"+cant+"$"+precio+"["+descripcion+"]";
+				}
+			});
+			console.log(articulos);
+			*/
+			
+			$('#generada').load(loadUrl,{generar:'true',fecha:fecha,fecha_pedido:fecha_pedido,fecha_entrega:fecha_entrega,fecha_xml:fecha_xml,no_factura:no_factura,no_pedido:no_pedido,no_proveedor:no_proveedor,ciudad:ciudad,bodega_destino:bodega_destino,bodega_receptora:bodega_receptora,region:region,fletera:fletera,articulos:articulos});
+		}else{
+			alert("NO SE PUEDE GENERAR LA ADDENDA, HAY DATOS INCOMPLETOS!")
+		}	
+	});
+</script>
+</body>
+</html>
